@@ -1,0 +1,14 @@
+public class MegaBytesConverter {
+    public static void printMegaBytesAndKiloBytes(int kiloBytes){
+        int megabytes = Math.round(kiloBytes/1024);
+        int rem  = kiloBytes % 1024;
+        if(kiloBytes<0){
+            System.out.print("Invalid Value");
+        }
+        else{
+        System.out.print(kiloBytes +" KB = "+megabytes+" MB and "+rem+" KB");
+        }
+        
+    }
+ 
+}
