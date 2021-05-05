@@ -1,0 +1,16 @@
+public class FirstLastDigitSum {
+    public static int sumFirstAndLastDigit(int number){
+        if (number > -1){
+            int digits = (int)(Math.log10(number));
+            int firstDig = (int)(number / (int)(Math.pow(10, digits)));
+            int lastDig = number%10;
+            return (firstDig + lastDig);
+        }
+        else if(number == 0){
+            return number;
+        }
+        else{
+            return -1;
+        }
+        }
+    }
