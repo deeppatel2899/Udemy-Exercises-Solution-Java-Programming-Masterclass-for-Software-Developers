@@ -1,0 +1,21 @@
+public class EvenDigitSum {
+    public static int getEvenDigitSum(int number){
+        int sum = 0; 
+        int lastDig = 0;
+      if (number >= 0)  {
+        while(number != 0){
+            lastDig = number%10;
+            
+            if(lastDig%2 == 0){
+                sum += lastDig;
+            }
+            number = number/10;
+        }
+        return sum;
+    }
+    else{
+        return -1;
+    }
+    }
+    
+}
