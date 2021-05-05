@@ -1,0 +1,18 @@
+public class NumberPalindrome {
+    public static boolean isPalindrome(int number){
+        number = Math.abs(number);
+        int num = number;
+        int reverse = 0;
+        int rem = 0;
+        while (num > 0) {
+            rem = num % 10;
+            reverse = reverse * 10 + rem;
+            num /= 10;
+        }
+        if (number == reverse) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
