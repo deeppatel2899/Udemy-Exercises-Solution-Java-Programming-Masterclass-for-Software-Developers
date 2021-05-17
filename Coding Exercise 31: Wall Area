@@ -1,0 +1,39 @@
+public class Wall {
+    private double width;
+    private double height;
+    
+    public Wall(){
+        this(0,0);
+    }
+    public Wall(double width, double height){
+        this.width = width;
+        this.height = height;
+        if(width<0)
+            this.width=0;
+        if(height<0)
+            this.height=0;
+    }
+    public double getWidth(){
+        return this.width;
+    }
+    public double getHeight(){
+        return this.height;
+    }
+    public void setWidth(double wide){
+        if(wide<0){
+            this.width = 0;
+        }else{
+            this.width = wide;
+        }
+    }
+    public void setHeight(double high){
+        if(high<0){
+            this.height = 0;
+        }else{
+            this.height = high;
+        }
+    }
+    public double getArea(){
+        return (this.width*this.height);
+    }
+}
